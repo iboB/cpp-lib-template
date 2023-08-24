@@ -30,9 +30,10 @@ include(icm_dev_mode)
 option(MYLIB_STATIC "mylib: build as a static library" OFF)
 option(MYLIB_BUILD_TESTS "mylib: enable testing and build tests" ${ICM_DEV_MODE})
 option(MYLIB_BUILD_EXAMPLES "mylib: build examples" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_SCRATCH "mylib: build scratch project (dev experiments)" ${ICM_DEV_MODE})
 option(MYLIB_BUILD_TUTORIALS "mylib: build tutorials" ${ICM_DEV_MODE})
 option(MYLIB_BUILD_BENCH "mylib: build benchmarks" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_SCRATCH "mylib: build scratch project (dev experiments)" ${ICM_DEV_MODE})
+mark_as_advanced(MYLIB_BUILD_SCRATCH)
 
 #######################################
 # cfg
