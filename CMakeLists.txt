@@ -27,21 +27,13 @@ include(icm_dev_mode)
 #######################################
 # options
 
-option(MYLIB_STATIC "mylib: build as a static library" OFF)
-option(MYLIB_BUILD_TESTS "mylib: enable testing and build tests" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_EXAMPLES "mylib: build examples" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_TUTORIALS "mylib: build tutorials" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_BENCH "mylib: build benchmarks" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_SCRATCH "mylib: build scratch project (dev experiments)" ${ICM_DEV_MODE})
+option(BUILD_SHARED_LIBS "${CMAKE_PROJECT_NAME}: build shared libraries" ON)
+option(MYLIB_BUILD_TESTS "${CMAKE_PROJECT_NAME}: enable testing and build tests" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_EXAMPLES "${CMAKE_PROJECT_NAME}: build examples" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_TUTORIALS "${CMAKE_PROJECT_NAME}: build tutorials" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_BENCH "${CMAKE_PROJECT_NAME}: build benchmarks" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_SCRATCH "${CMAKE_PROJECT_NAME}: build scratch project (dev experiments)" ${ICM_DEV_MODE})
 mark_as_advanced(MYLIB_BUILD_SCRATCH)
-
-#######################################
-# cfg
-if(ICM_STATIC_LIBS OR MYLIB_STATIC)
-    set(MYLIB_SHARED FALSE)
-else()
-    set(MYLIB_SHARED TRUE)
-endif()
 
 #######################################
 # code
