@@ -27,12 +27,12 @@ include(icm_dev_mode)
 #######################################
 # options
 
-option(BUILD_SHARED_LIBS "${CMAKE_PROJECT_NAME}: build shared libraries" ON)
-option(MYLIB_BUILD_TESTS "${CMAKE_PROJECT_NAME}: enable testing and build tests" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_EXAMPLES "${CMAKE_PROJECT_NAME}: build examples" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_TUTORIALS "${CMAKE_PROJECT_NAME}: build tutorials" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_BENCH "${CMAKE_PROJECT_NAME}: build benchmarks" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_SCRATCH "${CMAKE_PROJECT_NAME}: build scratch project (dev experiments)" ${ICM_DEV_MODE})
+option(BUILD_SHARED_LIBS "${PROJECT_NAME}: build shared libraries" ON)
+option(MYLIB_BUILD_TESTS "${PROJECT_NAME}: enable testing and build tests" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_EXAMPLES "${PROJECT_NAME}: build examples" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_TUTORIALS "${PROJECT_NAME}: build tutorials" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_BENCH "${PROJECT_NAME}: build benchmarks" ${ICM_DEV_MODE})
+option(MYLIB_BUILD_SCRATCH "${PROJECT_NAME}: build scratch project (dev experiments)" ${ICM_DEV_MODE})
 mark_as_advanced(MYLIB_BUILD_SCRATCH)
 
 #######################################
