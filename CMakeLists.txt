@@ -36,16 +36,12 @@ option(MYLIB_BUILD_TESTS "${PROJECT_NAME}: enable testing and build tests" ${ICM
 option(MYLIB_BUILD_EXAMPLES "${PROJECT_NAME}: build examples" ${ICM_DEV_MODE})
 option(MYLIB_BUILD_TUTORIALS "${PROJECT_NAME}: build tutorials" ${ICM_DEV_MODE})
 option(MYLIB_BUILD_BENCH "${PROJECT_NAME}: build benchmarks" ${ICM_DEV_MODE})
-option(MYLIB_BUILD_SCRATCH "${PROJECT_NAME}: build scratch project (dev experiments)" ${ICM_DEV_MODE})
-mark_as_advanced(MYLIB_BUILD_SCRATCH)
+option(MYLIB_BUILD_SANDBOX "${PROJECT_NAME}: build sandbox project (dev experiments)" ${ICM_DEV_MODE})
+mark_as_advanced(MYLIB_BUILD_SANDBOX)
 
 #######################################
 # code
 add_subdirectory(code)
-
-if(MYLIB_BUILD_SCRATCH)
-    add_subdirectory(scratch)
-endif()
 
 if(MYLIB_BUILD_TESTS)
     enable_testing()
@@ -58,4 +54,8 @@ endif()
 
 if(MYLIB_BUILD_EXAMPLES)
     add_subdirectory(example)
+endif()
+
+if(MYLIB_BUILD_SANDBOX)
+    add_subdirectory(sandbox)
 endif()
