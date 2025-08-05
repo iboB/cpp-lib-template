@@ -1,7 +1,6 @@
 // Copyright (c) Borislav Stanimirov
 // SPDX-License-Identifier: MIT
 //
-#pragma once
 #include "mylib.hpp"
 
 namespace mylib {
