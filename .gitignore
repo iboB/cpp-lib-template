@@ -1,11 +1,11 @@
 # project specific temp dirs
 tmp/
 
-# common in-source build artefact dirs
+# common in-source build artifact dirs
 out/
 build/
 
-# configure/codegen artefacts
+# configure/codegen artifacts
 gen/
 
 # optional cpm source cache (if not otherwise set)
