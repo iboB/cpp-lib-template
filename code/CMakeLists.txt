@@ -7,7 +7,7 @@ icm_add_lib(mylib MYLIB)
 add_library(mylib::mylib ALIAS mylib)
 target_include_directories(mylib INTERFACE .)
 
-CPMAddPackage(gh:iboB/splat@1.3.4)
+CPMAddPackage(gh:iboB/splat@1.3.5)
 
 target_link_libraries(mylib PUBLIC
     splat::splat
